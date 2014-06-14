@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F570F424194C2A3F005F97AD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F570F423194C2A3F005F97AD /* main.cpp */; };
 		F570F426194C2A3F005F97AD /* gimicUsbSpcTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F570F425194C2A3F005F97AD /* gimicUsbSpcTest.1 */; };
+		F57BAFA4194C411B00E9D728 /* libusb-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F57BAFA1194C40E400E9D728 /* libusb-1.0.a */; };
+		F57BAFAB194C419800E9D728 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57BAFAA194C419800E9D728 /* Foundation.framework */; };
+		F57BAFAC194C453D00E9D728 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57BAFA7194C413700E9D728 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,9 @@
 		F570F420194C2A3F005F97AD /* gimicUsbSpcTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gimicUsbSpcTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F570F423194C2A3F005F97AD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F570F425194C2A3F005F97AD /* gimicUsbSpcTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = gimicUsbSpcTest.1; sourceTree = "<group>"; };
+		F57BAFA1194C40E400E9D728 /* libusb-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libusb-1.0.a"; path = "../../../../../usr/local/lib/libusb-1.0.a"; sourceTree = "<group>"; };
+		F57BAFA7194C413700E9D728 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		F57BAFAA194C419800E9D728 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57BAFAB194C419800E9D728 /* Foundation.framework in Frameworks */,
+				F57BAFA4194C411B00E9D728 /* libusb-1.0.a in Frameworks */,
+				F57BAFAC194C453D00E9D728 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,9 @@
 		F570F417194C2A3F005F97AD = {
 			isa = PBXGroup;
 			children = (
+				F57BAFAA194C419800E9D728 /* Foundation.framework */,
+				F57BAFA7194C413700E9D728 /* IOKit.framework */,
+				F57BAFA1194C40E400E9D728 /* libusb-1.0.a */,
 				F570F422194C2A3F005F97AD /* gimicUsbSpcTest */,
 				F570F421194C2A3F005F97AD /* Products */,
 			);
@@ -92,7 +104,7 @@
 		F570F418194C2A3F005F97AD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = osoumen;
 			};
 			buildConfigurationList = F570F41B194C2A3F005F97AD /* Build configuration list for PBXProject "gimicUsbSpcTest" */;
@@ -127,10 +139,10 @@
 		F570F427194C2A3F005F97AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADDITIONAL_SDKS = /usr/local/lib;
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -151,19 +163,26 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				PRELINK_LIBS = "";
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
 		F570F428194C2A3F005F97AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADDITIONAL_SDKS = /usr/local/lib;
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -178,14 +197,26 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				SDKROOT = macosx;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRELINK_LIBS = "";
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};
 		F570F42A194C2A3F005F97AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/osoumen/libusb-1.0.18/Xcode/Release",
+					"/Users/osoumen/libusb-1.0.18/Xcode/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -193,6 +224,11 @@
 		F570F42B194C2A3F005F97AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/osoumen/libusb-1.0.18/Xcode/Release",
+					"/Users/osoumen/libusb-1.0.18/Xcode/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -216,6 +252,7 @@
 				F570F42B194C2A3F005F97AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
