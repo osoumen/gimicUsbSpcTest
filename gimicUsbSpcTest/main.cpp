@@ -1,5 +1,5 @@
 #include <iostream>
-#include  <iomanip>
+#include <iomanip>
 #include <libusb.h>
 
 #define GIMIC_USBVID 0x16c0

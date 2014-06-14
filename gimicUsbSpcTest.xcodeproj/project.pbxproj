@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F570F424194C2A3F005F97AD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F570F423194C2A3F005F97AD /* main.cpp */; };
-		F570F426194C2A3F005F97AD /* gimicUsbSpcTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F570F425194C2A3F005F97AD /* gimicUsbSpcTest.1 */; };
 		F57BAFA4194C411B00E9D728 /* libusb-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F57BAFA1194C40E400E9D728 /* libusb-1.0.a */; };
 		F57BAFAB194C419800E9D728 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57BAFAA194C419800E9D728 /* Foundation.framework */; };
 		F57BAFAC194C453D00E9D728 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57BAFA7194C413700E9D728 /* IOKit.framework */; };
@@ -21,7 +20,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				F570F426194C2A3F005F97AD /* gimicUsbSpcTest.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -30,7 +28,6 @@
 /* Begin PBXFileReference section */
 		F570F420194C2A3F005F97AD /* gimicUsbSpcTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gimicUsbSpcTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F570F423194C2A3F005F97AD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		F570F425194C2A3F005F97AD /* gimicUsbSpcTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = gimicUsbSpcTest.1; sourceTree = "<group>"; };
 		F57BAFA1194C40E400E9D728 /* libusb-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libusb-1.0.a"; path = "../../../../../usr/local/lib/libusb-1.0.a"; sourceTree = "<group>"; };
 		F57BAFA7194C413700E9D728 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		F57BAFAA194C419800E9D728 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				F570F423194C2A3F005F97AD /* main.cpp */,
-				F570F425194C2A3F005F97AD /* gimicUsbSpcTest.1 */,
 			);
 			path = gimicUsbSpcTest;
 			sourceTree = "<group>";
